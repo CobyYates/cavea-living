@@ -36,6 +36,7 @@
       </div>
     </v-col>
     <v-col cols="12" md="5">
+      <slot />
       <v-btn to="/plat" v-if="button" outlined color="primary">
         View Lots
       </v-btn>

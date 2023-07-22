@@ -34,6 +34,9 @@
           <router-link to="/plat" class="mr-6 font-weight-light">
             LOTS
           </router-link>
+          <router-link to="/contact" class="mr-6 font-weight-light">
+            CONTACT
+          </router-link>
           <router-link
             v-if="!isAuthenticated"
             to="/login"

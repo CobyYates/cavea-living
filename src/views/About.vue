@@ -12,7 +12,16 @@
     </v-row>
     <v-row class="my-0">
       <v-col class="mt-2">
-        <ArticleSimple v-bind="subHero" />
+        <ArticleSimple v-bind="subHero">
+          <v-btn
+            outlined
+            color="primary"
+            href="https://designmyelement.com"
+            target="_blank"
+          >
+            About Element Design Build
+          </v-btn>
+        </ArticleSimple>
       </v-col>
     </v-row>
     <GridSectionScreen class="pt-7 pb-10" :section="grid" />
