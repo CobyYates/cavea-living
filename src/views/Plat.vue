@@ -39,8 +39,8 @@
             >
               <tspan v-if="lot.locked">RESERVED</tspan>
               <tspan v-else-if="lot.lotID == 4 && !lot.locked">
-                <tspan y="-20" x="-34" dy=".3em">SPEC HOME</tspan>
-                <tspan y="-10" x="-20" dy="1em">FOR SALE</tspan>
+                <tspan y="-23" x="-34" dy=".3em">SPEC HOME</tspan>
+                <tspan y="-20" x="-20" dy="1em">FOR SALE</tspan>
               </tspan>
             </text>
           </svg>
