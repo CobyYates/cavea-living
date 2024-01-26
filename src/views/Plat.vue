@@ -477,7 +477,7 @@ export default {
       });
     },
     openPDF() {
-      window.open("https://cavealiving.com/img/flood-map.pdf");
+      window.open("https://cavealiving.com/img/icons/flood-map.pdf");
     },
   },
   created() {
