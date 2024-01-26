@@ -37,8 +37,10 @@
               font-size="18"
               font-weight="800"
             >
-              <tspan v-if="lot.locked">
-                {{ lot.lotID != 4 ? "RESERVED" : "SOLD" }}
+              <tspan v-if="lot.locked">RESERVED</tspan>
+              <tspan v-else-if="lot.lotID == 4 && !lot.locked">
+                <tspan y="-23" x="-34" dy=".3em">SPEC HOME</tspan>
+                <tspan y="-20" x="-20" dy="1em">FOR SALE</tspan>
               </tspan>
             </text>
           </svg>
@@ -155,6 +157,16 @@
                 Request Info
               </v-btn>
               <v-btn @click="openPDF" color="primary"> Floodplain Map </v-btn>
+            </v-card-actions>
+            <v-card-actions>
+              <v-btn
+                v-if="selectedLot.lotID == 4"
+                href="https://7421cavea.com/"
+                target="_blank"
+                block
+              >
+                Learn More
+              </v-btn>
             </v-card-actions>
           </div>
         </v-col>
@@ -341,7 +353,7 @@ import {
 import emailjs from "emailjs-com";
 import "animate.css";
 export default {
-  name: "home-view",
+  name: "plat-page",
   data() {
     return {
       imageDialog: false,
@@ -465,7 +477,7 @@ export default {
       });
     },
     openPDF() {
-      window.open("https://cavealiving.com/img/flood-map.pdf");
+      window.open("https://cavealiving.com/img/icons/flood-map.pdf");
     },
   },
   created() {
