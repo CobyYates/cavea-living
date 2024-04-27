@@ -94,9 +94,10 @@ export default {
     },
     submit() {
       let data = document.querySelector("form");
+      let serviceID = process.env.VUE_APP_EMAILJS_SERVICE_ID
       emailjs
         .sendForm(
-          "service_t17d6yr",
+          serviceID,
           "template_hrlgtjv",
           data,
           "user_NLbt6IypGmZIcL3nyfOql"
@@ -108,6 +109,7 @@ export default {
           (error) => {
             if (error) {
               this.error = "Message Failed to Send";
+              console.warn("Message Failed to Send", error);
             }
           }
         );

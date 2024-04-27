@@ -463,16 +463,17 @@ export default {
         this.loading = false;
         this.submitBtn = "Submitted";
         this.sent = true;
+        let serviceID = process.env.VUE_APP_EMAILJS_SERVICE_ID;
 
         try {
           emailjs.sendForm(
-            "service_t17d6yr",
+            serviceID,
             "template_3wdlsxk",
             data,
             "user_NLbt6IypGmZIcL3nyfOql"
           );
         } catch (error) {
-          console.log(error);
+          console.warn(error);
         }
       });
     },
