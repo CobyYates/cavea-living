@@ -94,7 +94,7 @@ export default {
     },
     submit() {
       let data = document.querySelector("form");
-      let serviceID = process.env.VUE_APP_EMAILJS_SERVICE_ID
+      let serviceID = process.env.VUE_APP_EMAILJS_SERVICE_ID;
       emailjs
         .sendForm(
           serviceID,
