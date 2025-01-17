@@ -37,8 +37,9 @@
               font-size="18"
               font-weight="800"
             >
-              <tspan v-if="lot.locked">RESERVED</tspan>
-              <tspan v-else-if="lot.lotID == 4 && !lot.locked">
+              <tspan v-if="lot?.customMessage">{{ lot?.customMessage }}</tspan>
+              <tspan v-if="lot?.locked">RESERVED</tspan>
+              <tspan v-else-if="lot?.lotID == 4 && !lot.locked">
                 <tspan y="-23" x="-34" dy=".3em">SPEC HOME</tspan>
                 <tspan y="-20" x="-20" dy="1em">FOR SALE</tspan>
               </tspan>
