@@ -137,7 +137,7 @@
                   class="font-weight-light"
                   :class="selectedLot.locked ? 'red--text' : 'green--text'"
                 >
-                  {{ selectedLot.locked ? "Reserved" : "Available" }}
+                  {{ selectedLot.customMessage ? selectedLot.customMessage : (selectedLot.locked ? "Reserved" : "Available") }}
                 </li>
                 <!-- <li class=" font-weight-light">
                   {{
