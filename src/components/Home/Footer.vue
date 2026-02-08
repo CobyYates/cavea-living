@@ -10,7 +10,9 @@
           <div class="pt-8 font-weight-light">
             <p class="mb-1">208-274-8000</p>
             <p class="mb-1">info@designmyelement.com</p>
-            <p class="mb-1">6149 N. Meeker Pl., Suite 100, Boise, ID 83713</p>
+            <p class="mb-1">
+              1500 W. Cayuse Creek Drive #100-B, Meridian, ID 83646
+            </p>
           </div>
         </v-col>
       </v-row>
